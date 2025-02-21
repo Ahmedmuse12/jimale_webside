@@ -1,71 +1,213 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset og basisoppsett */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background: #333;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-nav {
+    color: #222;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Mørk modus */
+  body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+  }
+  
+  /* Navbar */
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.hero {
-    text-align: center;
-    padding: 5rem 2rem;
     background: #007bff;
     color: white;
-}
-
-.portfolio {
-    text-align: center;
-    padding: 3rem 2rem;
-}
-
-.projects {
+    padding: 15px 20px;
+  }
+  
+  .nav-container {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.project {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-}
-
-.contact {
-    text-align: center;
-    padding: 2rem;
-    background: #333;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
     color: white;
-}
+    text-decoration: none;
+  }
+  
+  .theme-toggle {
+    cursor: pointer;
+    background: #f4f4f4;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+  }
+  
+  .profile-img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .hero h1 .highlight {
+    color: #ffeb3b;
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    background: white;
+    color: #007bff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  /* Om Meg / Portfolio / Kontakt Seksjoner */
+  .section {
+    padding: 40px 0;
+  }
+  
+  /* Prosjekter */
+  .projects {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .project {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex: 1 1 300px;
+  }
+  
+  .project:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  /* Kontakt Seksjon */
+  .contact-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #aaa;
+  }
+  
+  .contact-form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background: #0056b3;
+  }
+  
+  /* Footer */
+  .footer-container {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+  }
+  
+  /* Dark Mode Justeringer */
+  body.dark-mode .navbar {
+    background: #1f1f1f;
+  }
+  
+  body.dark-mode .theme-toggle {
+    background: #333;
+    color: #f4f4f4;
+  }
+  
+  body.dark-mode .cta-btn {
+    background: #f4f4f4;
+    color: #007bff;
+  }
+  
+  body.dark-mode .project {
+    background: #1f1f1f;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  body.dark-mode .contact-container {
+    background: #1f1f1f;
+  }
+  
+  body.dark-mode .contact-form input,
+  body.dark-mode .contact-form textarea {
+    background: #333;
+    border: 1px solid #555;
+    color: #f4f4f4;
+  }
+  

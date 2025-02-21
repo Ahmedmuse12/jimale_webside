@@ -1,108 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        .hero {
-            text-align: center;
-            padding: 5rem 2rem;
-            background: #007bff;
-            color: white;
-        }
-        .portfolio {
-            text-align: center;
-            padding: 3rem 2rem;
-        }
-        .projects {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        .project {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
-        }
-        .contact {
-            text-align: center;
-            padding: 2rem;
-            background: #333;
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Min Webutvikler-Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">MyPortfolio</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+  <header>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <div class="logo">🔥 WebUtvikler</div>
+        <ul class="nav-links">
+          <li><a href="#about">Om meg</a></li>
+          <li><a href="#portfolio">Prosjekter</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle">🌙 Mørk Modus</button>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>I'm a Web Developer</h1>
-        <p>Creating modern and high-performing websites.</p>
+      <div class="container hero-container">
+        <img src="bilder/Skjermbilde 2025-02-21 153934.png" alt="Profilbilde" class="profile-img">
+        <h1>Hei, jeg er en <span class="highlight">webutvikler</span>!</h1>
+        <p>Jeg bygger raske, moderne og vakre nettsider som imponerer.</p>
+        <a href="#contact" class="cta-btn">🚀 La oss jobbe sammen!</a>
+      </div>
     </section>
     
-    <section id="portfolio" class="portfolio">
-        <h2>My Work</h2>
+    <!-- Om meg -->
+    <section id="about" class="about section">
+      <div class="container">
+        <h2>Om Meg</h2>
+        <p>Jeg spesialiserer meg på front-end og back-end utvikling med moderne teknologier som HTML, CSS, JavaScript og React. La oss skape noe fantastisk sammen!</p>
+      </div>
+    </section>
+    
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio section">
+      <div class="container">
+        <h2>Mine Prosjekter</h2>
         <div class="projects">
-            <div class="project">
-                <h3>Big Company Website</h3>
-                <p>Developed the frontend for a major international company.</p>
-            </div>
-            <div class="project">
-                <h3>E-commerce Platform</h3>
-                <p>Built a high-converting online store with modern UI.</p>
-            </div>
+          <div class="project">
+            <img src="bilder/image.png" alt="Prosjekt 1" class="project-img">
+            <h3>🌍 Bedriftsnettsted</h3>
+            <p>En stilren nettside bygget for et internasjonalt selskap.</p>
+          </div>
+          <div class="project">
+            <img src="bilder/photo-1537511446984-935f663eb1f4.avif" alt="Prosjekt 2" class="project-img">
+            <h3>🛒 E-handel</h3>
+            <p>En robust nettbutikk med moderne design og høy konverteringsrate.</p>
+          </div>
+          <div class="project">
+            <img src="bilder/photo-1606787366850-de6330128bfc.avif"Prosjekt 3" class="project-img">
+            <h3>✍️ Bloggplattform</h3>
+            <p>En interaktiv blogg med et rent og responsivt oppsett.</p>
+          </div>
         </div>
+      </div>
     </section>
     
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>Email: contact@myportfolio.com</p>
+    <!-- Kontakt -->
+    <section id="contact" class="contact section">
+      <div class="container contact-container">
+        <h2>Kontakt Meg</h2>
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Navn:</label>
+            <input type="text" id="name" name="name" placeholder="Ditt navn" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-post:</label>
+            <input type="email" id="email" name="email" placeholder="Din e-postadresse" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Melding:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Din melding" required></textarea>
+          </div>
+          <button type="submit">Send Melding</button>
+        </form>
+      </div>
     </section>
+  </main>
+  
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 WebUtvikler. Alle rettigheter reservert.</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
 </body>
 </html>
