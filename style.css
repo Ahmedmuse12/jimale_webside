@@ -180,34 +180,48 @@
     color: white;
   }
   
-  /* Dark Mode Justeringer */
-  body.dark-mode .navbar {
-    background: #1f1f1f;
+  /* Standardstil */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
   }
   
-  body.dark-mode .theme-toggle {
-    background: #333;
-    color: #f4f4f4;
+  /* Dark Mode-stil */
+  body.dark {
+    background-color: #1e1e1e;
+    color: #f8f9fa;
   }
   
-  body.dark-mode .cta-btn {
-    background: #f4f4f4;
-    color: #007bff;
+  .dark .navbar, .dark .footer-container {
+    background-color: #252525;
   }
   
-  body.dark-mode .project {
-    background: #1f1f1f;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  .dark .cta-btn {
+    background-color: #f39c12;
+    color: white;
   }
   
-  body.dark-mode .contact-container {
-    background: #1f1f1f;
+  /* Kontaktfelt-forbedring */
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
   
-  body.dark-mode .contact-form input,
-  body.dark-mode .contact-form textarea {
-    background: #333;
-    border: 1px solid #555;
-    color: #f4f4f4;
+  .contact-form button {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
+  .contact-form button:hover {
+    background: #0056b3;
+  }
+  
   
