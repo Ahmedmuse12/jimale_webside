@@ -132,53 +132,55 @@
     background-color: #2e2e2e;
     color: #f8f9fa;
   }
+  /* Styling for kontaktskjemaet */
+form {
+    max-width: 600px;           /* Begrenset bredde for skjemaet */
+    margin: 20px auto;          /* Sentrert med litt margin på toppen og bunnen */
+    padding: 20px;              /* Innvendig margin for komfort */
+    background-color: #fff;     /* Hvit bakgrunn */
+    border-radius: 8px;         /* Myke hjørner */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Subtil skygge for dybde */
+  }
   
-  /* Kontaktseksjon */
-  .contact-container {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  form label {
+    display: block;             /* Gjør label til en blokk slik at den ligger over inputen */
+    margin-bottom: 5px;         /* Litt avstand under label */
+    font-weight: 600;           /* Fet tekst for tydelighet */
+    color: #333;                /* Mørk tekst for lesbarhet */
   }
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+  
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;                /* Tar opp full bredde i skjemaet */
+    padding: 10px;              /* Godt med innvendig margin */
+    margin-bottom: 15px;        /* Avstand mellom feltene */
+    border: 1px solid #ccc;     /* Lys grå kant */
+    border-radius: 4px;         /* Runde kanter på inputfeltene */
+    font-size: 1rem;            /* Konsistent tekststørrelse */
+    transition: border-color 0.3s ease;
   }
-  .contact-form .form-group {
-    display: flex;
-    flex-direction: column;
+  
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form textarea:focus {
+    border-color: #007bff;      /* Farger inputfeltet blått ved fokus */
+    outline: none;
   }
-  .contact-form label {
-    margin-bottom: 5px;
-    font-weight: 600;
-  }
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  .contact-form input::placeholder,
-  .contact-form textarea::placeholder {
-    color: #aaa;
-  }
-  .contact-form button {
-    background: #007bff;
-    color: white;
-    padding: 10px 15px;
+  
+  form button[type="submit"] {
+    background-color: #007bff;  /* Blå bakgrunn for knappen */
+    color: #fff;                /* Hvit tekst */
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 10px 15px;         /* Komfortabel polstring */
+    border-radius: 4px;         /* Runde kanter */
+    cursor: pointer;            /* Endrer markøren ved hover */
     font-size: 1rem;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
   }
-  .contact-form button:hover {
-    background: #0056b3;
+  
+  form button[type="submit"]:hover {
+    background-color: #0056b3;  /* Mørkere blå ved hover */
   }
   
   /* Mørk modus: Kontaktcontainer */
