@@ -66,26 +66,26 @@
     </section>
     
     <!-- Kontakt -->
-    <section id="contact" class="contact section">
-      <div class="container contact-container">
-        <h2>Kontakt Oss</h2>
-        <form id="contact-form" class="contact-form">
-          <div class="form-group">
-            <label for="name">Navn:</label>
-            <input type="text" id="name" name="name" placeholder="Ditt navn" required>
-          </div>
-          <div class="form-group">
-            <label for="email">E-post:</label>
-            <input type="email" id="email" name="email" placeholder="Din e-postadresse" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Melding:</label>
-            <textarea id="message" name="message" rows="5" placeholder="Din melding" required></textarea>
-          </div>
-          <button type="submit">Send Melding</button>
-        </form>
-      </div>
-    </section>
+    <form action="https://formsubmit.co/ahmedmuse12@icloud.com" method="POST">
+        <!-- Skjul at du får en kopi av e-posten (valgfritt) -->
+        <input type="hidden" name="_cc" value="kopi-til-andre@domene.com">
+        
+        <!-- Felt for navn -->
+        <label for="name">Navn:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <!-- Felt for e-post -->
+        <label for="email">E-post:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <!-- Felt for melding -->
+        <label for="message">Melding:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <!-- Send-knapp -->
+        <button type="submit">Send Melding</button>
+      </form>
+      
   </main>
   
   <footer>
